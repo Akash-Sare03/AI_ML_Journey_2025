@@ -51,3 +51,42 @@ def find_pairs():
 
 # Run the function
 find_pairs()
+
+
+
+## Question 4: Common Elements in Two Lists
+
+def common_elements():
+    list1_input = input("Enter first list of numbers separated by spaces: ")
+    list2_input = input("Enter second list of numbers separated by spaces: ")
+    
+    list1 = list(map(int, list1_input.split()))
+    list2 = list(map(int, list2_input.split()))
+    
+    set1 = set(list1)
+    set2 = set(list2)
+    
+    common = set1.intersection(set2)
+    return list(common)
+
+# Run the function and print result
+result = common_elements()
+print("Common elements:", result)
+
+
+## Question 5: Student Gradebook
+
+def student_gradebook():
+    grades = {}
+    while True:
+        name = input("Enter student name (or type 'stop' to finish): ")
+        if name.lower() == 'stop':
+            break
+        score = int(input(f"Enter score for {name}: "))
+        grades[name] = score
+
+    if grades:
+        top_student = max(grades, key=grades.get)
+        print(f"Top student: {top_student} with score {grades[top_student]}")
+    else:
+        print("No student data entered.")
