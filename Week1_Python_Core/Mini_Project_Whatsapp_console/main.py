@@ -1,6 +1,7 @@
 
 
 users = []
+message = {}
 
 def signup():
     username = input("Enter a new username: ").strip()
@@ -103,6 +104,8 @@ def delete_message(username):
     else:
         print("Invalid message number.")
 
+users = set()
+
 
 def main_menu(username):
     while True:
@@ -125,3 +128,7 @@ def main_menu(username):
             break
         else:
             print("Invalid choice, please try again.")
+
+
+
+        

@@ -241,3 +241,33 @@ circle = Circle(7)
 print_area(rect)     # Rectangle Area: 50
 print_area(tri)      # Triangle Area: 24.0
 print_area(circle)   # Circle Area: 153.938...
+
+
+
+## Bank Account Withdrawal with Exception Handling
+
+class BankAccount:
+    def __init__(self, account_holder, balance):
+        self.account_holder = account_holder
+        self.balance = balance
+    
+    def deposit(self, amount):
+        self.balance += amount
+
+    def withdraw(self, amount):
+        if amount > self.balance:
+         raise ValueError("Insufficient funds")
+        else:
+            self.balance -= amount
+
+    def display(self):
+        print(f"Account Holder: {self.account_holder}, Balance: {self.balance}")
+
+acc = BankAccount("Akash", 5000)
+try:
+    acc.withdraw(6000)
+except ValueError as e:
+    print(e)  # This will print "Insufficient funds" if balance is less
+acc.display()
+
+
