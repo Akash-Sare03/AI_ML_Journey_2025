@@ -104,8 +104,7 @@ def delete_message(username):
     else:
         print("Invalid message number.")
 
-users = set()
-
+    
 
 def main_menu(username):
     while True:
@@ -113,7 +112,9 @@ def main_menu(username):
         print("1. View Users")
         print("2. Send Message")
         print("3. Delete Message")
-        print("4. Logout")
+        print("4. Check Inbox")
+        print("5. Logout")
+
         
         choice = input("Enter your choice: ")
         
@@ -124,6 +125,8 @@ def main_menu(username):
         elif choice == '3':
             delete_message(username)
         elif choice == '4':
+            check_inbox(username)
+        elif choice == '5':
             print(f"Logging out {username}...")
             break
         else:
