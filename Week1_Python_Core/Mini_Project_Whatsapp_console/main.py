@@ -106,7 +106,7 @@ def delete_message(username):
 
     
 
-def main_menu(username):
+def main_menu1(username):
     while True:
         print("\nMain Menu:")
         print("1. View Users")
@@ -132,6 +132,6 @@ def main_menu(username):
         else:
             print("Invalid choice, please try again.")
 
+if __name__ == "__main__":
+    main_menu1()
 
-
-        
